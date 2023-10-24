@@ -197,6 +197,14 @@ namespace FinalProject
             {
                 childrenFee = 500 * (numChildren - 2);
             }
+            else if (singleRoom.Checked)
+            {
+                if(numAdults > 1 & numChildren >= 1)
+                {
+                    childrenFee = 500 * (numChildren - 1);
+                    adultFee = 500 * (numAdults - 1);
+                }
+            }
 
             int additionalGuestFee = adultFee + childrenFee;
             int totalAmountDue = totalRentalFee + additionalGuestFee;
