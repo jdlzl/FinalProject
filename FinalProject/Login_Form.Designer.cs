@@ -43,7 +43,7 @@
             this.CheckInn.AutoSize = true;
             this.CheckInn.BackColor = System.Drawing.SystemColors.Control;
             this.CheckInn.Font = new System.Drawing.Font("Bernard MT Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckInn.Location = new System.Drawing.Point(189, 32);
+            this.CheckInn.Location = new System.Drawing.Point(195, 32);
             this.CheckInn.Name = "CheckInn";
             this.CheckInn.Size = new System.Drawing.Size(156, 44);
             this.CheckInn.TabIndex = 0;
