@@ -117,4 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label12.Text" xml:space="preserve">
+    <value>-	Bed: Single bed
+-	Occupancy: 2 adults / 1 adult &amp; 1 kid 
+(12 years old and above are considered adults)
+*Add 500 php for extra pax
+-	Free breakfast
+-	LCD TV with cable channels
+-	Air-conditioning
+-	Wi-Fi access</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>-	Bed: Twin bed
+-	Occupancy: 2 adults &amp; 2 kids 
+(12 years old and above are considered adults)
+*Add 500 php for extra pax
+-	Free breakfast
+-	LCD TV with cable channels
+-	Air-conditioning
+-	Wi-Fi access</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>-	Bed: 2 double beds and a sofa bed
+-	Occupancy: 2 adults &amp; 2 kids 
+(12 years old and above are considered adults)
+*Add 500 php for extra pax
+-	Free breakfast
+-	LCD TV with cable channels
+-	Air-conditioning
+-	Wi-Fi access
+-	Refrigerator
+-	Hairdryer</value>
+  </data>
 </root>
