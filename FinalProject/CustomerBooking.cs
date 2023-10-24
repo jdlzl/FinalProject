@@ -165,7 +165,42 @@ namespace FinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int numNights = (int)(checkoutDate.Value - checkinDate.Value).TotalDays;
 
+            int nightlyRate = 0;
+            if (singleRoom.Checked)
+            {
+                nightlyRate = 2000;
+            }
+            else if (twinRoom.Checked)
+            {
+                nightlyRate = 2800;
+            }
+            else if (familyRoom.Checked)
+            {
+                nightlyRate = 4000;
+            }
+            int totalRentalFee = numNights * nightlyRate;
+
+
+            int numAdults = 0;
+            int numChildren = 0;
+            int.TryParse(adults.Text, out numAdults);
+            int.TryParse(children.Text, out numChildren);
+            int adultFee = 0;
+            int childrenFee = 0;
+            if (numAdults > 2)
+            {
+                adultFee = 500 * (numAdults - 2);
+            }
+            else if (numChildren > 2)
+            {
+                childrenFee = 500 * (numChildren - 2);
+            }
+
+            int additionalGuestFee = adultFee + childrenFee;
+            int totalAmountDue = totalRentalFee + additionalGuestFee;
+            totalAmount.Text = "₱" + totalAmountDue.ToString();
         }
 
         private void Total_Payment_Click(object sender, EventArgs e)
