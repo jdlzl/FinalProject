@@ -12,15 +12,19 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class CustomerBooking : Form
+    public partial class Booking : Form
     {
         bookingConnect book = new bookingConnect();
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader rd;
-        public CustomerBooking()
+        public Booking()
         {
             InitializeComponent();
+        }
+
+        public Booking(string firstName, string lastName)
+        {
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -227,34 +231,44 @@ namespace FinalProject
 
         }
 
-        public void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             conn = book.getCon();
             conn.Open();
 
             String selectedRoom = "";
-            if(singleRoom.Checked)
+            if (singleRoom.Checked)
                 selectedRoom = singleRoom.Text;
-            else if(twinRoom.Checked)
+            else if (twinRoom.Checked)
                 selectedRoom = twinRoom.Text;
-            else if(familyRoom.Checked)
+            else if (familyRoom.Checked)
                 selectedRoom = familyRoom.Text;
             String selectedPayOpt = "";
-            if(radioButton4.Checked)
+            if (radioButton4.Checked)
                 selectedPayOpt = radioButton4.Text;
             else if (radioButton5.Checked)
                 selectedPayOpt = radioButton5.Text;
 
-            cmd = new SqlCommand("insert into bookingTable values ('"+textBox1.Text+"','"+textBox2.Text+"', '"+textBox3.Text+"', '"+textBox4.Text+"', '"+textBox5.Text+"', @SelectedDate1, @SelectedDate2, '"+selectedRoom+"', '"+adults.Text+"', '"+children.Text+"', '"+selectedPayOpt+"', '"+totalAmount.Text+"')", conn);
+            cmd = new SqlCommand("insert into bookingTable values ('" + textBox1.Text + "','" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', @SelectedDate1, @SelectedDate2, '" + selectedRoom + "', '" + adults.Text + "', '" + children.Text + "', '" + selectedPayOpt + "', '" + totalAmount.Text + "')", conn);
             cmd.Parameters.AddWithValue("@SelectedDate1", checkinDate.Value);
             cmd.Parameters.AddWithValue("@SelectedDate2", checkoutDate.Value);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             conn.Close();
+            Login_Form login = new Login_Form();
+            login.Show();
 
-            ConfirmMessage confirm = new ConfirmMessage();  
-            confirm.Show();
+            
+
             this.Hide();
         }
+        private void adminLogin_button_Click_1(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+
+            this.Hide();
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FinalProject
 {
-    partial class CustomerBooking
+    partial class Booking
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerBooking));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Booking));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.totalAmount = new System.Windows.Forms.TextBox();
             this.total = new System.Windows.Forms.Button();
@@ -70,7 +71,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.adults = new System.Windows.Forms.TextBox();
             this.children = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.adminLogin_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -240,7 +241,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(407, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 537);
+            this.panel1.Size = new System.Drawing.Size(426, 541);
             this.panel1.TabIndex = 16;
             // 
             // pictureBox4
@@ -371,7 +372,7 @@
             this.panel2.Controls.Add(this.radioButton4);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 408);
+            this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(407, 129);
             this.panel2.TabIndex = 17;
@@ -388,6 +389,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(211, 129);
             this.panel3.TabIndex = 29;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(27, 38);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(23, 24);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "₱";
             // 
             // button2
             // 
@@ -506,21 +517,23 @@
             this.children.TabIndex = 23;
             this.children.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // label18
+            // adminLogin_button
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(27, 38);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(23, 24);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "₱";
+            this.adminLogin_button.Location = new System.Drawing.Point(125, 75);
+            this.adminLogin_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adminLogin_button.Name = "adminLogin_button";
+            this.adminLogin_button.Size = new System.Drawing.Size(71, 20);
+            this.adminLogin_button.TabIndex = 24;
+            this.adminLogin_button.Text = "Admin Login";
+            this.adminLogin_button.UseVisualStyleBackColor = true;
+            this.adminLogin_button.Click += new System.EventHandler(this.adminLogin_button_Click_1);
             // 
-            // CustomerBooking
+            // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 537);
+            this.ClientSize = new System.Drawing.Size(833, 541);
+            this.Controls.Add(this.adminLogin_button);
             this.Controls.Add(this.children);
             this.Controls.Add(this.adults);
             this.Controls.Add(this.label17);
@@ -543,7 +556,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
-            this.Name = "CustomerBooking";
+            this.Name = "Booking";
             this.Text = "CheckInn Hotel Reservation";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -605,5 +618,6 @@
         private System.Windows.Forms.TextBox totalAmount;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button adminLogin_button;
     }
 }
