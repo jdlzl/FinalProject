@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,10 @@ namespace FinalProject
 {
     public partial class CustomerBooking : Form
     {
+        bookingConnect book = new bookingConnect();
+        SqlConnection conn;
+        SqlCommand cmd;
+        SqlDataReader rd;
         public CustomerBooking()
         {
             InitializeComponent();
@@ -208,7 +214,7 @@ namespace FinalProject
 
             int additionalGuestFee = adultFee + childrenFee;
             int totalAmountDue = totalRentalFee + additionalGuestFee;
-            totalAmount.Text = "₱" + totalAmountDue.ToString();
+            totalAmount.Text = totalAmountDue.ToString();
         }
 
         private void Total_Payment_Click(object sender, EventArgs e)
@@ -219,6 +225,36 @@ namespace FinalProject
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn = book.getCon();
+            conn.Open();
+
+            String selectedRoom = "";
+            if(singleRoom.Checked)
+                selectedRoom = singleRoom.Text;
+            else if(twinRoom.Checked)
+                selectedRoom = twinRoom.Text;
+            else if(familyRoom.Checked)
+                selectedRoom = familyRoom.Text;
+            String selectedPayOpt = "";
+            if(radioButton4.Checked)
+                selectedPayOpt = radioButton4.Text;
+            else if (radioButton5.Checked)
+                selectedPayOpt = radioButton5.Text;
+
+            cmd = new SqlCommand("insert into bookingTable values ('"+textBox1.Text+"','"+textBox2.Text+"', '"+textBox3.Text+"', '"+textBox4.Text+"', '"+textBox5.Text+"', @SelectedDate1, @SelectedDate2, '"+selectedRoom+"', '"+adults.Text+"', '"+children.Text+"', '"+selectedPayOpt+"', '"+totalAmount.Text+"')", conn);
+            cmd.Parameters.AddWithValue("@SelectedDate1", checkinDate.Value);
+            cmd.Parameters.AddWithValue("@SelectedDate2", checkoutDate.Value);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            conn.Close();
+
+            ConfirmMessage confirm = new ConfirmMessage();  
+            confirm.Show();
+            this.Hide();
         }
     }
 }

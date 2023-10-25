@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form2 : Form
+    public partial class ConfirmMessage : Form
     {
-        public Form2()
+        public ConfirmMessage()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void linkButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
         }
     }
 }

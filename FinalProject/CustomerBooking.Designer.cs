@@ -59,6 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.totalAmount = new System.Windows.Forms.TextBox();
             this.total = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.adults = new System.Windows.Forms.TextBox();
             this.children = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -278,7 +279,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 385);
+            this.label14.Location = new System.Drawing.Point(6, 385);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(228, 130);
             this.label14.TabIndex = 24;
@@ -288,7 +289,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 228);
+            this.label13.Location = new System.Drawing.Point(6, 228);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(228, 104);
             this.label13.TabIndex = 23;
@@ -298,7 +299,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(14, 74);
+            this.label12.Location = new System.Drawing.Point(6, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(228, 104);
             this.label12.TabIndex = 22;
@@ -309,7 +310,7 @@
             // 
             this.familyRoom.AutoSize = true;
             this.familyRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.familyRoom.Location = new System.Drawing.Point(17, 365);
+            this.familyRoom.Location = new System.Drawing.Point(9, 365);
             this.familyRoom.Name = "familyRoom";
             this.familyRoom.Size = new System.Drawing.Size(148, 17);
             this.familyRoom.TabIndex = 21;
@@ -322,7 +323,7 @@
             // 
             this.twinRoom.AutoSize = true;
             this.twinRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.twinRoom.Location = new System.Drawing.Point(17, 208);
+            this.twinRoom.Location = new System.Drawing.Point(9, 208);
             this.twinRoom.Name = "twinRoom";
             this.twinRoom.Size = new System.Drawing.Size(140, 17);
             this.twinRoom.TabIndex = 20;
@@ -335,7 +336,7 @@
             // 
             this.singleRoom.AutoSize = true;
             this.singleRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.singleRoom.Location = new System.Drawing.Point(17, 54);
+            this.singleRoom.Location = new System.Drawing.Point(9, 54);
             this.singleRoom.Name = "singleRoom";
             this.singleRoom.Size = new System.Drawing.Size(148, 17);
             this.singleRoom.TabIndex = 19;
@@ -377,6 +378,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.totalAmount);
             this.panel3.Controls.Add(this.total);
@@ -386,6 +388,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(211, 129);
             this.panel3.TabIndex = 29;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(53, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Confirm Booking";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // totalAmount
             // 
@@ -412,7 +424,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(10, 9);
+            this.label15.Location = new System.Drawing.Point(4, 9);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 25);
             this.label15.TabIndex = 20;
@@ -449,7 +461,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 9);
+            this.label10.Location = new System.Drawing.Point(11, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 25);
             this.label10.TabIndex = 19;
@@ -494,14 +506,15 @@
             this.children.TabIndex = 23;
             this.children.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // button2
+            // label18
             // 
-            this.button2.Location = new System.Drawing.Point(53, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Confirm Booking";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(27, 38);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(23, 24);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "₱";
             // 
             // CustomerBooking
             // 
@@ -591,5 +604,6 @@
         private System.Windows.Forms.Button total;
         private System.Windows.Forms.TextBox totalAmount;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label18;
     }
 }
