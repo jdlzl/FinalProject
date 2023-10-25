@@ -56,16 +56,13 @@ namespace FinalProject
 
         private void button3_Click(object sender, EventArgs e) //Cancel
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Please select a booking to cancel.");
-                return;
-            }
-            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-            selectedRow.Cells["Total"].Value = "CANCELLED";
-            cmd = new SqlCommand("update bookingTable SET totalPayment = 'CANCELLED' where"); 
-                
-                
+            
+
+        }
+
+        private void button4_Click(object sender, EventArgs e) //Update
+        {
+          
         }
     }
 }

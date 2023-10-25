@@ -16,6 +16,7 @@ namespace FinalProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new CustomerBooking());
             Application.Run(new Database());
         }
     }
