@@ -255,12 +255,33 @@ namespace FinalProject
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             conn.Close();
-            Login_Form login = new Login_Form();
-            login.Show();
+            ResetFields();
 
-            
+        }
+        private void ResetFields()
+        {
+           
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            adults.Text = "";
+            children.Text = "";
 
-            this.Hide();
+
+            singleRoom.Checked = false;
+            twinRoom.Checked = false;
+            familyRoom.Checked = false;
+            radioButton4.Checked = false;
+            radioButton5.Checked = false;
+
+          
+            checkinDate.Value = DateTime.Now;
+            checkoutDate.Value = DateTime.Now;
+
+         
+            totalAmount.Text = "";
         }
         private void adminLogin_button_Click_1(object sender, EventArgs e)
         {

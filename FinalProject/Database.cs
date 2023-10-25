@@ -65,9 +65,11 @@ namespace FinalProject
 
                 dataGridView1.Rows.RemoveAt(selectedIndex);
 
+                int id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value);
+
                 conn = book.getCon();
                 conn.Open();
-                cmd = new SqlCommand("DELETE FROM bookingTable WHERE CONCAT (firstName, lastName, address, phoneNum, emailAdd, checkInDate, checkOutDate, roomType, adultsNum, childrenNum, paymentOpt, totalPayment) LIKE '%" + textBox1.Text + "%'", conn);
+                cmd = new SqlCommand("DELETE FROM bookingTable WHERE bookingID = " + id, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -75,6 +77,7 @@ namespace FinalProject
             {
                 MessageBox.Show("Please select a row to delete");
             }
+        
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -92,28 +95,38 @@ namespace FinalProject
             }
         }
 
-
-        private void button4_Click(object sender, EventArgs e) //Update
-        {
-          
-
-        }
-
         private void Database_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'checkInnDataSet.bookingTable' table. You can move, or remove it, as needed.
+            
             this.bookingTableTableAdapter.Fill(this.checkInnDataSet.bookingTable);
 
         }
+        private void button4_Click(object sender, EventArgs e) //Update
+        {
+            
+        }
+
+
 
         private void button2_Click(object sender, EventArgs e) //Check Out
         {
+            // Retrieve the selected row in the DataGridView
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
+            // Set the ReadOnly property of the row to true
+            selectedRow.ReadOnly = true;
         }
 
-        private void edit_button_Click(object sender, EventArgs e)
+        private void edit_button_Click(object sender, EventArgs e) //Edit
         {
-
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                dataGridView1.BeginEdit(true);
+            }
+            else
+            {
+                MessageBox.Show("Please select a cell to edit");
+            }
         }
     }
 }

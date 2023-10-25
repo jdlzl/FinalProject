@@ -89,10 +89,11 @@
             this.Column17});
             this.dataGridView1.DataSource = this.checkInnDataSetBindingSource;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(64, 138);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(1004, 492);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column4
@@ -213,18 +214,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 21);
+            this.label2.Location = new System.Drawing.Point(57, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 31);
+            this.label2.Size = new System.Drawing.Size(374, 47);
             this.label2.TabIndex = 2;
             this.label2.Text = "Booking Database";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(607, 417);
+            this.button2.Location = new System.Drawing.Point(542, 636);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 31);
+            this.button2.Size = new System.Drawing.Size(159, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "Check Out";
             this.button2.UseVisualStyleBackColor = true;
@@ -233,9 +236,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(451, 417);
+            this.button3.Location = new System.Drawing.Point(325, 636);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 31);
+            this.button3.Size = new System.Drawing.Size(198, 48);
             this.button3.TabIndex = 5;
             this.button3.Text = "Cancel Booking";
             this.button3.UseVisualStyleBackColor = true;
@@ -244,9 +248,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(355, 417);
+            this.button4.Location = new System.Drawing.Point(194, 636);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 31);
+            this.button4.Size = new System.Drawing.Size(108, 48);
             this.button4.TabIndex = 6;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
@@ -254,18 +259,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 67);
+            this.textBox1.Location = new System.Drawing.Point(160, 103);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 20);
+            this.textBox1.Size = new System.Drawing.Size(439, 26);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1392, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(2088, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(354, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -273,10 +280,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(451, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(676, -3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(261, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(392, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -299,19 +305,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(64, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 18);
+            this.label1.Size = new System.Drawing.Size(81, 26);
             this.label1.TabIndex = 13;
             this.label1.Text = "Search";
             // 
             // edit_button
             // 
             this.edit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit_button.Location = new System.Drawing.Point(263, 416);
+            this.edit_button.Location = new System.Drawing.Point(64, 637);
+            this.edit_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edit_button.Name = "edit_button";
-            this.edit_button.Size = new System.Drawing.Size(72, 31);
+            this.edit_button.Size = new System.Drawing.Size(108, 48);
             this.edit_button.TabIndex = 14;
             this.edit_button.Text = "Edit";
             this.edit_button.UseVisualStyleBackColor = true;
@@ -319,10 +325,10 @@
             // 
             // Database
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(738, 450);
+            this.ClientSize = new System.Drawing.Size(1681, 692);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -333,6 +339,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Database";
             this.Text = "Database";
             this.Load += new System.EventHandler(this.Database_Load_1);
